@@ -1,0 +1,145 @@
+#slider {
+    width: 100%;
+    height: 100vh;
+}
+
+.sliderItems {
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+}
+
+.sliderItem {
+
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.sliderItems button {
+    z-index: 11;
+    position: absolute;
+    border: none;
+    background: transparent;
+    top: 50%;
+    bottom: 50%;
+    margin: auto 0;
+    height: 5rem;
+    width: 6rem;
+}
+
+.sliderItems button box-icon {
+    width: 100%;
+    height: 100%;
+}
+
+#prev {
+    left: 0.1rem;
+}
+
+#next {
+    right: 0.1rem;
+}
+
+.sliderItem img {
+    width: 100%;
+    height: 100%;
+}
+
+.itemInfo {
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    width: 100%;
+    row-gap: 2rem;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: -100rem;
+}
+
+.itemTitle,
+.itemContent {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+.itemTitle {
+    width: 60%;
+    font-size: 3rem;
+}
+
+.itemContent {
+    margin-top: -2rem;
+    opacity: 0.85;
+    width: 50%;
+    font-size: 1.2rem;
+}
+
+.activeSliderItem {
+    z-index: 4;
+}
+
+
+
+@media (max-width: 550px) {
+    .sliderItems button {
+        height: 4rem;
+        width: 2.3rem;
+    }
+
+    .itemTitle {
+        width: 90%;
+        font-size: 2rem;
+    }
+
+    .itemContent {
+        width: 80%;
+        font-size: 0.9rem;
+        color: white;
+    }
+
+}
+
+@media (min-width:551px) and (max-width: 768px) {
+    .sliderItems button {
+        height: 3rem;
+        width: 3rem;
+    }
+
+    .itemTitle {
+        width: 90%;
+        font-size: 3rem;
+    }
+
+    .itemContent {
+        width: 80%;
+        font-size: 1.2rem;
+        color: white;
+    }
+}
+
+@media (min-width:769px) and (max-width: 1023px) {
+     .sliderItems button {
+        height: 4rem;
+        width: 5rem;
+    }
+
+    .itemTitle {
+        width: 90%;
+        font-size: 3rem;
+    }
+
+    .itemContent {
+        width: 80%;
+        font-size: 1.4rem;
+        color: white;
+    }
+}

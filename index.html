@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pekarna Stephanie</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="./public/css/animations.css">
+  <link rel="stylesheet" href="./public/css/header.css">
+  <link rel="stylesheet" href="./public/css/slider.css">
+  <link rel="stylesheet" href="./public/css/about.css">
+
+  <!--GOOGLE FONTS-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- header start -->
+
+  <div id="header">
+
+    <header>
+
+      <!-- navigation on bigger screens  -->
+      <div class="headerBig">
+        <div class="info">
+          <p>Pekarna Stephanie</p>
+          <a href="#slider">
+            <box-icon name='baguette' color="white" animation='tada-hover' class="logo-white"></box-icon>
+            <box-icon name='baguette' color="red" animation='tada-hover' class="logo-red"></box-icon>
+          </a>
+        </div>
+        <ul class="nav-items">
+          <li><a href="#slider">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- navigation closed on mobile -->
+      <div class="headerMobile">
+
+        <div class="navigationClose">
+          <div class="info">
+            <p>Pekarna Stephanie</p>
+            <a href="#slider">
+              <box-icon name='baguette' color="white" animation='tada-hover'></box-icon>
+            </a>
+          </div>
+
+          <button id="openNavBtn">
+            <box-icon name='menu' color="white" class="closedMenu"></box-icon>
+          </button>
+        </div>
+      </div>
+
+  </div>
+
+
+  <!-- navigation opened on mobile -->
+  <div class="navigationOn flyFromRightClass">
+
+    <div class="head">
+
+      <div class="navigationInfo">
+        <p>Pekarna Stephanie</p>
+        <a href="#slider">
+          <box-icon name='baguette' color="white" animation='tada-hover' class="logo-white"></box-icon>
+        </a>
+      </div>
+
+      <button id="closeNavBtn">
+        <box-icon name='x-circle' color="white" ></box-icon>
+      </button>
+
+    </div>
+
+    <div class="decoration decoration1 flyFromRightClassDelay200">
+    </div>
+    <div class="decoration decoration2 flyFromRightClassDelay100">
+    </div>
+
+    <ul class="navigationItems">
+      <li class="navigationItem ">
+        <a href="#slider">Home</a>
+        <box-icon color="white" name='home-alt-2' type='solid'></box-icon>
+      </li>
+      <li class="navigationItem">
+        <a href="#about">About Us</a>
+        <box-icon type='solid' color="white" name='user-detail'></box-icon>
+      </li>
+      <li class="navigationItem">
+        <a href="#gallery">Gallery</a>
+        <box-icon color="white" name='photo-album' type='solid'></box-icon>
+      </li>
+      <li class="navigationItem">
+        <a href="#features">Features</a>
+        <box-icon type='solid' color="white" name='food-menu'></box-icon>
+      </li>
+      <li class="navigationItem">
+        <a href="#reviews">Reviews</a>
+        <box-icon type='solid' color="white" name='bookmark-star'></box-icon>
+      </li>
+      <li class="navigationItem">
+        <a href="#contact">Contact Us</a>
+        <box-icon type='solid' color="white" name='conversation'></box-icon>
+      </li>
+    </ul>
+
+
+  </div>
+
+
+  <!-- header end -->
+
+
+  <div id="slider">
+
+    <div class="sliderItems">
+
+      <button id="prev">
+        <box-icon id="prev" name='chevron-left' color="white" animation="burst-hover"></box-icon>
+      </button>
+
+      <button id="next">
+        <box-icon id="next" name='chevron-right' color="white" animation="burst-hover"></box-icon>
+      </button>
+
+      <div class="sliderItem">
+
+        <picture>
+          <source media="(max-width: 550px)" srcset="./public/images/image1Mobile.jpg">
+          <source media="(min-width: 551px) and (max-width: 768px)" srcset="./public/images/image1phTablet.jpg">
+          <source media="(min-width: 769px) and (max-width: 1023px)" srcset="./public/images/image1Tablet.jpg">
+          <img src="./public/images/image1Pc.jpg" alt="" class="sliderImage">
+          <!--PC-->
+        </picture>
+
+
+
+        <div class="itemInfo">
+          <h1 class="itemTitle">Savršeno Zlatan Kruh</h1>
+          <p class="itemContent">Ukrasava nas prekrasno zlatno hrskavo tijesto, mirisom koji mami i okusom koji ostavlja bez daha. Užitak svakog zalogaja.
+          </p>
+        </div>
+
+
+      </div>
+
+      <div class="sliderItem">
+
+        <picture>
+          <source media="(max-width: 550px)" srcset="./public/images/image2Mobile.jpg">
+          <source media="(min-width: 551px) and (max-width: 768px)" srcset="./public/images/image2phTablet.jpg">
+          <source media="(min-width: 769px) and (max-width: 1023px)" srcset="./public/images/image2Tablet.jpg">
+          <img src="./public/images/image2Pc.jpg" alt="" class="sliderImage">
+          <!--PC-->
+        </picture>
+
+        <div class="itemInfo">
+          <h1 class="itemTitle">Sočno Pecivo Spremno za Uživanje</h1>
+          <p class="itemContent">Ovo predivno pecivo osvaja nas svojom sočnošću, izraženim okusom i zlatno smeđom koricom koja mami. Spremno je da vas razveseli u bilo koje doba dana.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="sliderItem">
+
+        <picture>
+          <source media="(max-width: 550px)" srcset="./public/images/image3Mobile.jpg">
+          <source media="(min-width: 551px) and (max-width: 768px)" srcset="./public/images/image3phTablet.jpg">
+          <source media="(min-width: 769px) and (max-width: 1023px)" srcset="./public/images/image3Tablet.jpg">
+          <img src="./public/images/image3Pc.jpg" alt="" class="sliderImage">
+          <!--PC-->
+        </picture>
+
+        <div class="itemInfo">
+          <h1 class="itemTitle">Užitak uz Miris Kave i Hrskav Kroasan</h1>
+          <p class="itemContent">Sjedinjeni miris kave i hrskavost kroasana stvaraju neodoljivu harmoniju, čineći svaki trenutak ispunjenim uživanjem i potpunim opuštanjem.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+
+  <div id="about"></div>
+
+  <div id="gallery"></div>
+
+  <div id="features"></div>
+
+  <div id="reviews"></div>
+
+  <div id="contact"></div>
+  
+
+
+
+
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+  <script src="./public/js/header.js"></script>
+  <script src="./public/js/slider.js"></script>
+  <script src="./public/js/about.js"></script>
+
+
+</body>
+
+</html>

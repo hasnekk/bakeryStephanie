@@ -1,0 +1,196 @@
+/*SLIDER ANIMATIONS*/
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0.7;
+    }
+}
+
+.showOpacity {
+    animation: show 1000ms ease;
+}
+
+@keyframes fromBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.flyInFromBottom {
+    animation: fromBottom 500ms ease-in-out;
+}
+
+
+@keyframes sliderImage {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.2);
+    }
+
+}
+
+.sliderImageAnimation {
+    animation: sliderImage 500ms ease-in;
+}
+
+
+@keyframes sliderImageOnLoad {
+    0% {
+        transform: scale(3);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.sliderImageAnimationOnLoad {
+    animation: sliderImageOnLoad 1s cubic-bezier(0.30, 0.30, 0.83, 0.83);
+}
+
+.sliderImageAnimation {
+    animation: sliderImage 1500ms ease-in;
+}
+
+
+@keyframes sliderImagePopIn {
+    0% {
+        transform: scale(0.7);
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.sliderImageAnimationPopIn {
+    animation: sliderImagePopIn 0.5s ease-in;
+}
+
+/**/
+
+
+/*about animations*/
+@keyframes fromRight {
+
+    0% {
+        transform: translateX(20vw);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+}
+
+.flyFromRight {
+    animation: fromRight 1s ease-in;
+}
+
+.flyFromRightSlow100 {
+    animation: fromRight 1s ease-in;
+}
+
+
+@keyframes showFull {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.showOpacityFull {
+    animation: showFull 1.5s ease-in;
+}
+
+
+/*navigation animations*/
+
+@keyframes flyInFromRight {
+    0% {
+        transform: translateX(100vw);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.flyFromRightClass {
+    animation: flyInFromRight 700ms ease-in;
+}
+
+.flyFromRightClassDelay100 {
+    animation: flyInFromRight 700ms ease-in;
+}
+
+.flyFromRightClassDelay200 {
+    animation: flyInFromRight 800ms ease-in;
+}
+
+@keyframes flyInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-60%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.flyInFromLeftClass000 {
+    animation: flyInFromLeft 500ms ease-in;
+}
+
+.flyInFromLeftClass100 {
+    animation: flyInFromLeft 500ms ease-in;
+    animation-delay: 100ms;
+
+}
+
+.flyInFromLeftClass200 {
+    animation: flyInFromLeft 500ms ease-in;
+    animation-delay: 200ms;
+
+}
+
+.flyInFromLeftClass300 {
+    animation: flyInFromLeft 500ms ease-in;
+    animation-delay: 300ms;
+
+}
+
+.flyInFromLeftClass400 {
+    animation: flyInFromLeft 500ms ease-in;
+    animation-delay: 400ms;
+
+}
+
+.flyInFromLeftClass500 {
+    animation: flyInFromLeft 500ms ease-in;
+    animation-delay: 500ms;
+}
+
+
+/**/
