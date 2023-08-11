@@ -6,8 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pekarna Stephanie</title>
 
+  <!-- Bootstrap css -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 
+  <!--My css links-->
   <link rel="stylesheet" href="./public/css/animations.css">
   <link rel="stylesheet" href="./public/css/header.css">
   <link rel="stylesheet" href="./public/css/slider.css">
@@ -39,9 +41,9 @@
         </div>
         <ul class="nav-items">
           <li><a href="#slider">Home</a></li>
+          <li><a href="#features">Features</a></li>
           <li><a href="#about">About Us</a></li>
           <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#features">Features</a></li>
           <li><a href="#reviews">Reviews</a></li>
           <li><a href="#contact">Contact Us</a></li>
         </ul>
@@ -80,7 +82,7 @@
       </div>
 
       <button id="closeNavBtn">
-        <box-icon name='x-circle' color="white" ></box-icon>
+        <box-icon name='x-circle' color="white"></box-icon>
       </button>
 
     </div>
@@ -96,16 +98,16 @@
         <box-icon color="white" name='home-alt-2' type='solid'></box-icon>
       </li>
       <li class="navigationItem">
+        <a href="#features">Features</a>
+        <box-icon type='solid' color="white" name='food-menu'></box-icon>
+      </li>
+      <li class="navigationItem">
         <a href="#about">About Us</a>
         <box-icon type='solid' color="white" name='user-detail'></box-icon>
       </li>
       <li class="navigationItem">
         <a href="#gallery">Gallery</a>
         <box-icon color="white" name='photo-album' type='solid'></box-icon>
-      </li>
-      <li class="navigationItem">
-        <a href="#features">Features</a>
-        <box-icon type='solid' color="white" name='food-menu'></box-icon>
       </li>
       <li class="navigationItem">
         <a href="#reviews">Reviews</a>
@@ -198,27 +200,150 @@
   </div>
 
 
+  <div id="features">
 
+    <div class="container">
 
-  <div id="about">
+      <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+        <div class="col">
+          <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('./public/images/featureMufin.jpg'); background-repeat: no-repeat; background-size: cover;">
+            <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+              <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold"> Slatki Užitak U Svakom Zalogaju</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('./public/images/featurePizza.jpg'); background-repeat: no-repeat; background-size: cover;">
+            <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+              <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Pizza Ekstravagancija: Savršeno Zapečeni Okusi</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('./public/images/featureCoffe.jpg'); background-repeat: no-repeat; background-size: cover;">
+            <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+              <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Aromatična Kava: Čarolija Okusa</h3>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
   </div>
 
-  <div id="gallery"></div>
+  <hr>
 
-  <div id="features"></div>
+  <div id="about">
 
-  <div id="reviews"></div>
+    <div class="aboutInfo">
+      <h1>About Us</h1>
+      <p>
+        Pekara "Stephanie" priča je o strastvenom putovanju i posvećenosti stvaranju ukusnih pekarskih proizvoda. Njena priča seže unatrag nekoliko desetljeća, duboko u srce tradicije i inovacije u svijetu pekarstva.
+      </p>
+      <a href="#contact">
+        Contact Us
+      </a>
+    </div>
 
-  <div id="contact"></div>
-  
+    <div class="aboutImage">
+      <picture>
+        <source media="(max-width: 550px)" srcset="./public/images/aboutMobile.jpg" />
+        <img src="./public/images/aboutBg.jpg" alt="about us image">
+      </picture>
+    </div>
+
+  </div>
+
+  <hr>
+
+  <div id="gallery">
+
+    <section class="py-5 text-center container">
+      <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+          <h1 class="fw-light">Gallery</h1>
+          <p class="lead text-body-secondary">Dobrodošli u srcu mog pekarskog ateljea gdje se spajaju umjetnost i pečenje. Ovdje svaka poslastica postaje vizualno remek-djelo, pažljivo oblikovana da očara i nepce i oko. Pridružite nam se u istraživanju bogatstva boja i tekstura kruhova, peciva i kolača koji su izloženi kao prava umjetnička djela.</p>
+          <p>
+            <a href="#contact" class="btn btn-primary my-2">Contact Us</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="album py-5 bg-body-tertiary">
+      <div class="container">
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          <div class="col">
+            <button style="border:none; background-color: transparent;">
+              <div class="card shadow-sm">
+                <img width="100%" height="225" src="./public/images/albumCoverPizza.jpg" alt="album cover pizza">
+                <div class="card-body">
+                  <p class="card-text">Moja pizza - savršena simfonija okusa. Raskošna kombinacija svježih sastojaka na hrskavoj kori. Užitak za nepce.</p>
+                </div>
+              </div>
+            </button>
+          </div>
+          <div class="col">
+            <button style="border:none; background-color: transparent;">
+              <div class="card shadow-sm">
+                <img width="100%" height="225" src="./public/images/albumCoverDrinks.jpg" alt="album cover pizza">
+                <div class="card-body">
+                  <p class="card-text">Moji napitci - čarolija okusa u svakom gutljaju. Osvježavajuće i ukusno piće koje pruža nevjerojatno zadovoljstvo.</p>
+                </div>
+              </div>
+            </button>
+          </div>
+          <div class="col">
+            <button style="border:none; background-color: transparent;">
+              <div class="card shadow-sm">
+                <img width="100%" height="225" src="./public/images/albumCoverBread.jpg" alt="album cover pizza">
+                <div class="card-body">
+                  <p class="card-text">Moji kruhovi - izvor topline i okusa. Mekoća unutar hrskave korice, pružajući zadovoljstvo u svakom zalogaju.</p>
+                </div>
+              </div>
+            </button>
+          </div>
+          <div class="col">
+            <button style="border:none; background-color: transparent;">
+              <div class="card shadow-sm">
+                <img width="100%" height="225" src="./public/images/albumCoverCupCake.jpg" alt="album cover pizza">
+                <div class="card-body">
+                  <p class="card-text">Moji keksi - savršena poslastica za svaki trenutak. Hrskavi, puni okusa, donose radost u svaki zalogaj.</p>
+                </div>
+              </div>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="reviews">
+
+  </div>
+
+  <div id="contact">
+
+  </div>
+
+ 
 
 
 
-
+  <!-- Box Icons Script -->
   <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 
+  <!-- My Sripts -->
   <script src="./public/js/header.js"></script>
   <script src="./public/js/slider.js"></script>
+  <script src="./public/js/features.js"></script>
   <script src="./public/js/about.js"></script>
 
 
