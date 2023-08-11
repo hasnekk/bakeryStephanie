@@ -10,15 +10,22 @@ let navigationItems = document.querySelectorAll('.navigationItem');
 
 openNavBtn.addEventListener('click', () => {
     navigationClose.style.display = 'none';
+
+    navigationOn.classList.add('flyFromRightClass');
     navigationOn.style.display = 'flex';
-    document.body.style.position = 'fixed';
 
     setTimeout(() => {
+
+        navigationOn.classList.remove('flyFromRightClass');
+
+
         let animationName;
         for (let i = 0; i < navigationItems.length; i++) {
             animationName = `flyInFromLeftClass`;
             animationName += i + '00';
             navigationItems[i].classList.add(animationName);
+
+            document.body.style.position = 'fixed';
 
             setTimeout(() => {
                 navigationItems[i].style.opacity = 1;
@@ -29,9 +36,17 @@ openNavBtn.addEventListener('click', () => {
 });
 
 closeNavBtn.addEventListener('click', () => {
-    navigationOn.style.display = 'none';
-    navigationClose.style.display = 'flex';
+
     document.body.style.position = 'relative';
+    navigationOn.classList.add('flyToRightClass');
+
+
+    setTimeout(() => {
+        navigationOn.classList.remove('flyToRightClass');
+        navigationOn.style.display = 'none';
+        navigationClose.style.display = 'flex';
+    }, 700);
+
 
     let animationName;
     for (let i = 0; i < navigationItems.length; i++) {

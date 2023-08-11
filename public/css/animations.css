@@ -147,6 +147,24 @@
     animation: flyInFromRight 800ms ease-in;
 }
 
+@keyframes flyOutToRight {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(100vw);
+    }
+
+}
+
+.flyToRightClass {
+    animation: flyOutToRight 700ms ease-in;
+}
+
+
 @keyframes flyInFromLeft {
     0% {
         opacity: 0;
