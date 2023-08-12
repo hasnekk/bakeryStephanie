@@ -8,7 +8,11 @@ let observerSmall = new IntersectionObserver((entries) => {
             element.target.classList.remove('sliderImageAnimationPopIn');
         }
     });
-});
+},
+{
+    threshold : [0.5]
+}
+);
 
 cards.forEach((card) => {
     observerSmall.observe(card);

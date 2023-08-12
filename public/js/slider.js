@@ -8,6 +8,7 @@ let sliderItems = document.querySelectorAll('.sliderItem');
 
 // variables
 let activeItemIndex = 0;
+let previousActiveSliderItem = 0;
 //
 
 // on load
@@ -79,13 +80,21 @@ function setActiveItemIndex(event) {
     }
 }
 
+let setTimeOutIds = [];
 function handleClick(event) {
 
-    let previousActiveSliderItem = activeItemIndex;
+    setTimeOutIds.forEach((timeOut) => {
+        clearTimeout(timeOut);
+    });
+    setTimeOutIds.splice(0, setTimeOutIds.length)
+
+    sliderItems[previousActiveSliderItem].classList.remove('previousSliderItem');
+    previousActiveSliderItem = activeItemIndex;
 
     setActiveItemIndex(event);
 
     // remove the active class from the prevoius active slider item
+    sliderItems[previousActiveSliderItem].classList.add('previousSliderItem');
     sliderItems[previousActiveSliderItem].classList.remove('activeSliderItem');
 
     // set the active picture
@@ -102,7 +111,7 @@ function handleClick(event) {
     // main image animation
     sliderItems[activeItemIndex].classList.add('sliderImageAnimationPopIn');
 
-    setTimeout(() => {
+    let timeOutId = setTimeout(() => {
         // main image animation removed
         sliderItems[activeItemIndex].classList.remove('sliderImageAnimationPopIn');
 
@@ -111,9 +120,10 @@ function handleClick(event) {
         content.style.display = 'inline';
         content.style.opacity = 0; // otherwise the title will be pushed up when animation for the content finishes
         title.classList.add('flyInFromBottom');
-    }, 500);
+    }, 800);
+    setTimeOutIds.push(timeOutId);
 
-    setTimeout(() => {
+    timeOutId = setTimeout(() => {
 
         // remove title animation
         title.classList.remove('flyInFromBottom');
@@ -121,15 +131,17 @@ function handleClick(event) {
         // add content animation
         content.classList.add('showOpacity');
 
-    }, 1000);
+    }, 1300);
+    setTimeOutIds.push(timeOutId);
 
-    setTimeout(() => {
+    timeOutId = setTimeout(() => {
 
         // remove content animation
         content.classList.remove('showOpacity');
         content.style.opacity = 0.7;
 
-    }, 2000);
+    }, 2300);
+    setTimeOutIds.push(timeOutId);
 
 }
 
@@ -214,7 +226,13 @@ sliderImages.forEach((sliderImage) => {
 function swipeOnSlider(swipedRIght, swipedLeft) {
     if (swipedRIght || swipedLeft) {
 
-        let previousActiveSliderItem = activeItemIndex;
+        setTimeOutIds.forEach((timeOut) => {
+            clearTimeout(timeOut);
+        });
+        setTimeOutIds.splice(0, setTimeOutIds.length)
+
+        sliderItems[previousActiveSliderItem].classList.remove('previousSliderItem');
+        previousActiveSliderItem = activeItemIndex;
 
         if (swipedRIght) {
             activeItemIndex++;
@@ -229,6 +247,7 @@ function swipeOnSlider(swipedRIght, swipedLeft) {
         }
 
         // remove the active class from the prevoius active slider item
+        sliderItems[previousActiveSliderItem].classList.add('previousSliderItem');
         sliderItems[previousActiveSliderItem].classList.remove('activeSliderItem');
 
         // set the active picture
@@ -245,7 +264,7 @@ function swipeOnSlider(swipedRIght, swipedLeft) {
         // main image animation
         sliderItems[activeItemIndex].classList.add('sliderImageAnimationPopIn');
 
-        setTimeout(() => {
+        let timeOutId = setTimeout(() => {
             // main image animation removed
             sliderItems[activeItemIndex].classList.remove('sliderImageAnimationPopIn');
 
@@ -254,9 +273,10 @@ function swipeOnSlider(swipedRIght, swipedLeft) {
             content.style.display = 'inline';
             content.style.opacity = 0; // otherwise the title will be pushed up when animation for the content finishes
             title.classList.add('flyInFromBottom');
-        }, 500);
+        }, 800);
+        setTimeOutIds.push(timeOutId);
 
-        setTimeout(() => {
+        timeOutId = setTimeout(() => {
 
             // remove title animation
             title.classList.remove('flyInFromBottom');
@@ -264,15 +284,17 @@ function swipeOnSlider(swipedRIght, swipedLeft) {
             // add content animation
             content.classList.add('showOpacity');
 
-        }, 1000);
+        }, 1300);
+        setTimeOutIds.push(timeOutId);
 
-        setTimeout(() => {
+        timeOutId = setTimeout(() => {
 
             // remove content animation
             content.classList.remove('showOpacity');
             content.style.opacity = 0.7;
 
-        }, 2000);
+        }, 2300);
+        setTimeOutIds.push(timeOutId);
 
     }
 }

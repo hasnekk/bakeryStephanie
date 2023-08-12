@@ -67,8 +67,8 @@
 
 @keyframes sliderImagePopIn {
     0% {
-        transform: scale(0.7);
-        opacity: 0.5;
+        transform: scale(0.3);
+        opacity: 0.7;
     }
 
     100% {
@@ -78,7 +78,7 @@
 }
 
 .sliderImageAnimationPopIn {
-    animation: sliderImagePopIn 0.5s ease-in;
+    animation: sliderImagePopIn 0.8s ease-out;
 }
 
 /**/
@@ -119,7 +119,7 @@
 }
 
 .showOpacityFull {
-    animation: showFull 1.5s ease-in;
+    animation: showFull 2s ease-in-out;
 }
 
 

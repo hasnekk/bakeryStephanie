@@ -81,7 +81,7 @@
 }
 
 .contactFormItem input {
-    width: 60%;
+    width: 80%;
     height: 2rem;
 
     border: none;
@@ -89,7 +89,7 @@
 }
 
 .contactFormItem textarea {
-    width: 80%;
+    width: 90%;
     height: 10rem;
 
     border: none;

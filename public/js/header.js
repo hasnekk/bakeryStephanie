@@ -8,7 +8,10 @@ let closeNavBtn = document.getElementById('closeNavBtn');
 let navigationItems = document.querySelectorAll('.navigationItem');
 //
 
-openNavBtn.addEventListener('click', () => {
+openNavBtn.addEventListener('click', (event) => {
+
+    event.preventDefault();
+
     navigationClose.style.display = 'none';
 
     navigationOn.classList.add('flyFromRightClass');
@@ -25,19 +28,25 @@ openNavBtn.addEventListener('click', () => {
             animationName += i + '00';
             navigationItems[i].classList.add(animationName);
 
-            document.body.style.position = 'fixed';
 
             setTimeout(() => {
                 navigationItems[i].style.opacity = 1;
             }, i * 110);
         }
+
+
     }, 700);
 
 });
 
-closeNavBtn.addEventListener('click', () => {
+closeNavBtn.addEventListener('click', (event) => {
 
-    document.body.style.position = 'relative';
+    closeMobileNavigation();
+
+});
+
+function closeMobileNavigation() {
+
     navigationOn.classList.add('flyToRightClass');
 
 
@@ -45,18 +54,18 @@ closeNavBtn.addEventListener('click', () => {
         navigationOn.classList.remove('flyToRightClass');
         navigationOn.style.display = 'none';
         navigationClose.style.display = 'flex';
+
+        let animationName;
+        for (let i = 0; i < navigationItems.length; i++) {
+            animationName = `flyInFromLeftClass`;
+            animationName += i + '00';
+            navigationItems[i].classList.remove(animationName);
+            navigationItems[i].style.opacity = 0;
+        }
+
     }, 700);
 
-
-    let animationName;
-    for (let i = 0; i < navigationItems.length; i++) {
-        animationName = `flyInFromLeftClass`;
-        animationName += i + '00';
-        navigationItems[i].classList.remove(animationName);
-        navigationItems[i].style.opacity = 0;
-    }
-
-});
+}
 
 window.addEventListener('resize', () => {
     closeNavBtn.click();
@@ -70,5 +79,3 @@ window.addEventListener('keydown', (event) => {
 });
 
 
-// change header to black
-// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="./public/images/faviconIcon.png">
   <title>Pekarna Stephanie</title>
 
   <!-- Bootstrap css -->
@@ -62,7 +63,7 @@
             </a>
           </div>
 
-          <button id="openNavBtn">
+          <button id="openNavBtn" type="button">
             <box-icon name='menu' color="white" class="closedMenu"></box-icon>
           </button>
         </div>
@@ -83,7 +84,7 @@
         </a>
       </div>
 
-      <button id="closeNavBtn">
+      <button id="closeNavBtn" type="button">
         <box-icon name='x-circle' color="white"></box-icon>
       </button>
 
@@ -96,27 +97,27 @@
 
     <ul class="navigationItems">
       <li class="navigationItem ">
-        <a href="#slider">Home</a>
+        <a onclick="closeMobileNavigation()" href="#slider">Home</a>
         <box-icon color="white" name='home-alt-2' type='solid'></box-icon>
       </li>
       <li class="navigationItem">
-        <a href="#features">Features</a>
+        <a onclick="closeMobileNavigation()" href="#features">Features</a>
         <box-icon type='solid' color="white" name='food-menu'></box-icon>
       </li>
       <li class="navigationItem">
-        <a href="#about">About Us</a>
+        <a onclick="closeMobileNavigation()" href="#about">About Us</a>
         <box-icon type='solid' color="white" name='user-detail'></box-icon>
       </li>
       <li class="navigationItem">
-        <a href="#gallery">Gallery</a>
+        <a onclick="closeMobileNavigation()" href="#gallery">Gallery</a>
         <box-icon color="white" name='photo-album' type='solid'></box-icon>
       </li>
       <li class="navigationItem">
-        <a href="#reviews">Reviews</a>
+        <a onclick="closeMobileNavigation()" href="#reviews">Reviews</a>
         <box-icon type='solid' color="white" name='bookmark-star'></box-icon>
       </li>
       <li class="navigationItem">
-        <a href="#contact">Contact Us</a>
+        <a onclick="closeMobileNavigation()" href="#contact">Contact Us</a>
         <box-icon type='solid' color="white" name='conversation'></box-icon>
       </li>
     </ul>
@@ -281,44 +282,44 @@
 
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
           <div class="col">
-            <button style="border:none; background-color: transparent;">
+            <a href="./views/album.html" style="border:none; background-color: transparent;">
               <div class="card shadow-sm">
                 <img width="100%" height="225" src="./public/images/albumCoverPizza.jpg" alt="album cover pizza">
                 <div class="card-body">
                   <p class="card-text">Moja pizza - savršena simfonija okusa. Raskošna kombinacija svježih sastojaka na hrskavoj kori. Užitak za nepce.</p>
                 </div>
               </div>
-            </button>
+            </a>
           </div>
           <div class="col">
-            <button style="border:none; background-color: transparent;">
+            <a href="./views/album.html" style="border:none; background-color: transparent;">
               <div class="card shadow-sm">
                 <img width="100%" height="225" src="./public/images/albumCoverDrinks.jpg" alt="album cover pizza">
                 <div class="card-body">
                   <p class="card-text">Moji napitci - čarolija okusa u svakom gutljaju. Osvježavajuće i ukusno piće koje pruža nevjerojatno zadovoljstvo.</p>
                 </div>
               </div>
-            </button>
+            </a>
           </div>
           <div class="col">
-            <button style="border:none; background-color: transparent;">
+            <a href="./views/album.html" style="border:none; background-color: transparent;">
               <div class="card shadow-sm">
                 <img width="100%" height="225" src="./public/images/albumCoverBread.jpg" alt="album cover pizza">
                 <div class="card-body">
                   <p class="card-text">Moji kruhovi - izvor topline i okusa. Mekoća unutar hrskave korice, pružajući zadovoljstvo u svakom zalogaju.</p>
                 </div>
               </div>
-            </button>
+            </a>
           </div>
           <div class="col">
-            <button style="border:none; background-color: transparent;">
+            <a href="./views/album.html" style="border:none; background-color: transparent;">
               <div class="card shadow-sm">
                 <img width="100%" height="225" src="./public/images/albumCoverCupCake.jpg" alt="album cover pizza">
                 <div class="card-body">
                   <p class="card-text">Moji keksi - savršena poslastica za svaki trenutak. Hrskavi, puni okusa, donose radost u svaki zalogaj.</p>
                 </div>
               </div>
-            </button>
+            </a>
           </div>
 
         </div>
@@ -385,7 +386,7 @@
     </div>
 
 
-    <form action="" method="post">
+    <form action="" method="post" onsubmit="return checkReviewForm()">
       <h3>
         Please let us know your experience at our bakery
         <box-icon name='smile' color="white"></box-icon>
@@ -393,20 +394,23 @@
 
       <div class="formInput">
         <label for="title">Title: </label>
-        <input type="text" name="title">
+        <input type="text" name="title" required>
       </div>
 
       <div class="formInput">
         <label for="review">Review: </label>
-        <textarea name="review" id="" cols="22" rows="5"></textarea>
+        <textarea name="review" id="" rows="5" required></textarea>
       </div>
 
-      <div class="reviewStars">
-        <box-icon id="star1" class="star" name='star' color="white"></box-icon>
-        <box-icon id="star1" class="star" name='star' color="white"></box-icon>
-        <box-icon id="star1" class="star" name='star' color="white"></box-icon>
-        <box-icon id="star1" class="star" name='star' color="white"></box-icon>
-        <box-icon id="star1" class="star" name='star' color="white"></box-icon>
+      <div class="formReviewStars reviewStars">
+        <box-icon id="star1" class="star" name='star' type="solid" color="white"></box-icon>
+        <box-icon id="star2" class="star" name='star' type="solid" color="white"></box-icon>
+        <box-icon id="star3" class="star" name='star' type="solid" color="white"></box-icon>
+        <box-icon id="star4" class="star" name='star' type="solid" color="white"></box-icon>
+        <box-icon id="star5" class="star" name='star' type="solid" color="white"></box-icon>
+
+        <input type="number" id="starReviewRating" name="starReviewRating" value="-1" hidden>
+
       </div>
 
 
@@ -444,7 +448,8 @@
       </a>
     </div>
 
-    <form action="" method="post" class="contactForm">
+    <form action="" method="post" class="contactForm" onsubmit="return checkContactForm()">
+      <!--This is also dealt with in reviews.js at the end-->
 
       <h1>Contact us directly</h1>
 
@@ -464,7 +469,7 @@
       </div>
 
       <div class="contactFormItem">
-        <label for="message">Your message</label>
+        <label for="message">Your message*</label>
         <textarea name="message" placeholder="Your message here." required></textarea>
       </div>
 
@@ -488,21 +493,18 @@
         </div>
 
         <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-          <li class="ms-3"><a target="_blank" class="text-body-secondary" href="https://www.instagram.com/khasnek/?hl=hr">
-              <box-icon class="bi" width="24" height="24" type='logo' name='instagram-alt'></box-icon>
-            </a></li>
           <li class="ms-3"><a target="_blank" class="text-body-secondary" href="https://github.com/hasnekk">
-            <box-icon class="bi" width="24" height="24" name='github' type='logo' ></box-icon>
-          </a></li>
+              <box-icon class="bi" width="24" height="24" name='github' type='logo'></box-icon>
+            </a></li>
           <li class="ms-3"><a target="_blank" class="text-body-secondary" href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=kristijanhasnek3@gmail.com">
-            <box-icon class="bi" width="24" height="24" name='gmail' type='logo' ></box-icon>
-          </a></li>
+              <box-icon class="bi" width="24" height="24" name='gmail' type='logo'></box-icon>
+            </a></li>
           <li class="ms-3"><a target="_blank" class="text-body-secondary" href="tel:+385913650449">
-            <box-icon class="bi" width="24" height="24" name='phone' type='solid' ></box-icon>
-          </a></li>
+              <box-icon class="bi" width="24" height="24" name='phone' type='solid'></box-icon>
+            </a></li>
           <li class="ms-3"><a target="_blank" class="text-body-secondary" href="https://hr.linkedin.com/in/kristijan-hasnek-b68814218">
-            <box-icon class="bi" width="24" height="24" name='linkedin-square' type='logo' ></box-icon>
-          </a></li>
+              <box-icon class="bi" width="24" height="24" name='linkedin-square' type='logo'></box-icon>
+            </a></li>
         </ul>
       </footer>
     </div>
@@ -518,6 +520,7 @@
   <script src="./public/js/features.js"></script>
   <!--Features rješava i animacije za gallery-->
   <script src="./public/js/about.js"></script>
+  <script src="./public/js/reviews.js"></script>
 
 
 </body>
