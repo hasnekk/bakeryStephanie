@@ -14,6 +14,8 @@
   <link rel="stylesheet" href="./public/css/header.css">
   <link rel="stylesheet" href="./public/css/slider.css">
   <link rel="stylesheet" href="./public/css/about.css">
+  <link rel="stylesheet" href="./public/css/reviews.css">
+  <link rel="stylesheet" href="./public/css/contact.css">
 
   <!--GOOGLE FONTS-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -327,14 +329,184 @@
 
   <div id="reviews">
 
+    <h1>Customer Reviews</h1>
+
+    <div class="wrapperReviews">
+
+      <div class="review">
+        <h2>Ukusni Raj u Svijetu Kolača</h2>
+        <p>U vašoj pekari sam doživio pravu poslasticu. Raznolikost okusa i kvaliteta su nevjerojatni! Slatkiši su sočni, peciva savršeno hrskava, a ljubazno osoblje upotpunjuje jedinstveno iskustvo. Svaka posjeta je čarolija za nepce i dušu.</p>
+        <div class="reviewStars">
+          <box-icon name='star' type='solid' color="gold"></box-icon>
+          <box-icon name='star' type='solid' color="gold"></box-icon>
+          <box-icon name='star' type='solid' color="gold"></box-icon>
+          <box-icon name='star' type='solid' color="gold"></box-icon>
+          <box-icon name='star' type='solid' color="gold"></box-icon>
+        </div>
+      </div>
+
+      <div class="review">
+        <h2>Čarobni Kutak Slatkog Užitka</h2>
+        <p>Ova nevjerojatna pekara je zaista pravo otkriće! Bez obzira jeste li ljubitelj slatkog ili slanog, ovdje ćete pronaći raj za svoje nepce. Slatki i slani okusi su savršeno uravnoteženi, te svaki zalogaj donosi eksploziju okusa koja vas oduševljava. Unatoč tome, primijetio/la sam da su cijene nešto više nego što bih očekivao/la. No, vrijedno je svakog novčića. Atmosfera je topla i ugodna, a osoblje izuzetno ljubazno i spremno pomoći u odabiru.</p>
+        <div class="reviewStars">
+          <box-icon name='star' type='solid' color="gold"></box-icon>
+          <box-icon name='star' type='solid' color="gold"></box-icon>
+          <box-icon name='star' type='solid' color="gold"></box-icon>
+          <box-icon name='star' type='solid' color="gold"></box-icon>
+          <box-icon name='star' color="white"></box-icon>
+        </div>
+      </div>
+
+      <div class="review">
+        <h2>Savršeno Mjesto za Gurmanske Radosti</h2>
+        <p>Ova pekara je pravo malo čudo! Svaki detalj, od mirisa do prezentacije slastica, pažljivo je osmišljen kako bi vas preplavio osjećajem zadovoljstva. Slatkiši nisu samo ukusni, već i pravo malo umjetničko djelo. Peciva su izvanredno hrskava, a kreme nevjerojatno kremaste. Cijene su prilično razumne s obzirom na kvalitetu i pažnju koja se posvećuje svakom proizvodu.</p>
+        <div class="reviewStars">
+          <box-icon name='star' type='solid' color="gold"></box-icon>
+          <box-icon name='star' type='solid' color="gold"></box-icon>
+          <box-icon name='star' type='solid' color="gold"></box-icon>
+          <box-icon name='star' type='solid' color="gold"></box-icon>
+          <box-icon name='star' type='solid' color="gold"></box-icon>
+        </div>
+      </div>
+
+
+      <div class="review">
+        <h2>Solidan Izbor za Brze Grickalice</h2>
+        <p>Ova pekara nudi širok spektar slastica i peciva koji će zadovoljiti sve vaše želje. Iako sam primijetio/la da kvaliteta ponekad varira, neosporno je da uvijek možete pronaći nešto što će vam uljepšati dan. Za brze grickalice i opuštajuće trenutke uz kavu, ovo je solidan izbor.</p>
+        <div class="reviewStars">
+          <box-icon name='star' type='solid' color="gold"></box-icon>
+          <box-icon name='star' type='solid' color="gold"></box-icon>
+          <box-icon name='star' type='solid' color="gold"></box-icon>
+          <box-icon name='star' color="white"></box-icon>
+          <box-icon name='star' color="white"></box-icon>
+        </div>
+      </div>
+
+    </div>
+
+
+    <form action="" method="post">
+      <h3>
+        Please let us know your experience at our bakery
+        <box-icon name='smile' color="white"></box-icon>
+      </h3>
+
+      <div class="formInput">
+        <label for="title">Title: </label>
+        <input type="text" name="title">
+      </div>
+
+      <div class="formInput">
+        <label for="review">Review: </label>
+        <textarea name="review" id="" cols="22" rows="5"></textarea>
+      </div>
+
+      <div class="reviewStars">
+        <box-icon id="star1" class="star" name='star' color="white"></box-icon>
+        <box-icon id="star1" class="star" name='star' color="white"></box-icon>
+        <box-icon id="star1" class="star" name='star' color="white"></box-icon>
+        <box-icon id="star1" class="star" name='star' color="white"></box-icon>
+        <box-icon id="star1" class="star" name='star' color="white"></box-icon>
+      </div>
+
+
+      <button id="postReview">
+        Add review
+      </button>
+
+    </form>
+
+
   </div>
 
   <div id="contact">
 
+    <div class="headerContact">
+      <a target="_blank" href="https://www.instagram.com/" class="contactItem">
+        <box-icon name='instagram-alt' type='logo'></box-icon>
+        <h2>Instagram</h2>
+        <p>PekarnaStephanie</p>
+      </a>
+      <a target="_blank" href="https://hr-hr.facebook.com/" class="contactItem">
+        <box-icon name='facebook-circle' type='logo'></box-icon>
+        <h2>Facebook</h2>
+        <p>PekarnaStephanieFb</p>
+      </a>
+      <a target="_blank" href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=info@proizvodnjabelovar.hr" class="contactItem">
+        <box-icon name='gmail' type='logo'></box-icon>
+        <h2>Email</h2>
+        <p>info@proizvodnjabelovar.hr</p>
+      </a>
+      <a target="_blank" href="tel:+ 385 98 856 651" class="contactItem">
+        <box-icon type='solid' name='phone'></box-icon>
+        <h2>Phone</h2>
+        <p>+ 385 98 856 651</p>
+      </a>
+    </div>
+
+    <form action="" method="post" class="contactForm">
+
+      <h1>Contact us directly</h1>
+
+      <div class="contactFormItem">
+        <label for="name">Your name*</label>
+        <input type="text" name="name" placeholder="John" required>
+      </div>
+
+      <div class="contactFormItem">
+        <label for="email">Your email*</label>
+        <input type="email" name="email" placeholder="JohnDoe@gmail.com" required>
+      </div>
+
+      <div class="contactFormItem">
+        <label for="title">Title</label>
+        <input type="text" name="title" placeholder="message title">
+      </div>
+
+      <div class="contactFormItem">
+        <label for="message">Your message</label>
+        <textarea name="message" placeholder="Your message here." required></textarea>
+      </div>
+
+      <button id="contactSubmit">
+        Send
+      </button>
+
+    </form>
+
+    <div class="ourLocation">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d223.7684608069401!2d16.173441593295284!3d45.881765505329305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476677c88aeafd8b%3A0x61c34769055eaf8e!2sPekarna%20Stephanie!5e0!3m2!1shr!2shr!4v1691835773065!5m2!1shr!2shr" width="100%" height="100%" style="border:0;" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
   </div>
 
- 
+  <footer>
+    <div class="container">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center">
+          <span class="mb-3 mb-md-0 text-body-secondary">© 2023 <a target="_blank" href="https://hasnekk.github.io/PersonalSite/">Kristijan Hasnek</a></span>
+        </div>
 
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+          <li class="ms-3"><a target="_blank" class="text-body-secondary" href="https://www.instagram.com/khasnek/?hl=hr">
+              <box-icon class="bi" width="24" height="24" type='logo' name='instagram-alt'></box-icon>
+            </a></li>
+          <li class="ms-3"><a target="_blank" class="text-body-secondary" href="https://github.com/hasnekk">
+            <box-icon class="bi" width="24" height="24" name='github' type='logo' ></box-icon>
+          </a></li>
+          <li class="ms-3"><a target="_blank" class="text-body-secondary" href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=kristijanhasnek3@gmail.com">
+            <box-icon class="bi" width="24" height="24" name='gmail' type='logo' ></box-icon>
+          </a></li>
+          <li class="ms-3"><a target="_blank" class="text-body-secondary" href="tel:+385913650449">
+            <box-icon class="bi" width="24" height="24" name='phone' type='solid' ></box-icon>
+          </a></li>
+          <li class="ms-3"><a target="_blank" class="text-body-secondary" href="https://hr.linkedin.com/in/kristijan-hasnek-b68814218">
+            <box-icon class="bi" width="24" height="24" name='linkedin-square' type='logo' ></box-icon>
+          </a></li>
+        </ul>
+      </footer>
+    </div>
+  </footer>
 
 
   <!-- Box Icons Script -->
@@ -344,6 +516,7 @@
   <script src="./public/js/header.js"></script>
   <script src="./public/js/slider.js"></script>
   <script src="./public/js/features.js"></script>
+  <!--Features rješava i animacije za gallery-->
   <script src="./public/js/about.js"></script>
 
 
