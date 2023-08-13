@@ -67,13 +67,13 @@
 
 @keyframes sliderImagePopIn {
     0% {
-        transform: scale(0.3);
-        opacity: 0.7;
+        opacity: 0;
+        transform: translateX(-100%);
     }
 
     100% {
+        transform: translateX(0);
         opacity: 1;
-        transform: scale(1);
     }
 }
 
