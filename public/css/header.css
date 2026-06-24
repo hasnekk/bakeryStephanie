@@ -14,12 +14,14 @@ header {
     position: fixed;
     z-index: 999;
 
-    /* background-color: transparent; */
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: var(--scrim);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .navigationOn {
-    background-color: #212121;
+    background-color: var(--bg);
     height: 100vh;
     width: 100vw;
 
@@ -60,8 +62,14 @@ header {
     color: white;
 }
 
+.info p {
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    transition: color 200ms ease;
+}
+
 .info p:hover {
-    color: red;
+    color: var(--accent);
 }
 
 .info a:hover .logo-red {
@@ -90,10 +98,12 @@ header {
 .nav-items a {
     text-decoration: none;
     color: white;
+    font-size: 0.95rem;
+    transition: color 200ms ease;
 }
 
 .nav-items li:hover a {
-    color: red;
+    color: var(--accent);
 }
 
 
@@ -230,7 +240,8 @@ header {
 
         width: 25%;
         height: 65%;
-        background-color: #ffffff;
+        background-color: var(--accent);
+        opacity: 0.85;
     }
 
     .decoration2 {
@@ -238,7 +249,7 @@ header {
 
         width: 30%;
         height: 65%;
-        background-color: rgba(139, 137, 137, 0.993);
+        background-color: var(--surface-2);
     }
 
     /**/
@@ -270,20 +281,30 @@ header {
         width: 80%;
 
         height: 3.5rem;
-        border-radius: 15px;
-        border: 1px solid white;
+        border-radius: 12px;
+        border: 1px solid var(--border-strong);
 
         opacity: 0;
 
+        transition: border-color 200ms ease, background-color 200ms ease;
     }
 
+    .navigationItem:hover {
+        border-color: var(--accent);
+        background-color: var(--surface);
+    }
 
     .navigationItem a {
         text-decoration: none;
-        color: white;
+        color: var(--fg);
         text-align: center;
         width: 75%;
         font-size: 1.4rem;
-    } 
+        transition: color 200ms ease;
+    }
+
+    .navigationItem:hover a {
+        color: var(--accent);
+    }
 
 }
